@@ -1,0 +1,396 @@
+/*GLOBAL*/
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color: #dddddd;
+}
+
+.pagecontainer {
+	max-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 200px;
+	padding-bottom: 100px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	margin-left: 30px;
+	font-family: 'Arapey', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 90pt;
+	line-height: 95%;
+	letter-spacing: -4px;
+}
+
+h2 {
+	font-family: 'Arapey', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 50pt;
+	line-height: 95%;
+	letter-spacing: -2px;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.description {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 40px;
+}
+
+.description p {
+	font-size: 14pt;
+}
+
+table {
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12pt;
+}
+
+table td {
+	padding: 10px 10px;
+}
+
+table tr {
+	vertical-align: top;
+}
+
+#toprow {
+	height: 80px;
+	font-weight: 500;
+}
+
+
+/*HEADER*/
+
+nav.large {
+    position: fixed;
+	overflow: hidden;
+    top: 0;
+    z-index: 9999;
+    height: 120px;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-transition: height .4s; /* Safari */
+    transition: height .4s;
+	margin-bottom: 80px;
+}
+
+nav.small {
+    height: 60px !important;
+	font-size: 12px;
+}
+
+.logoframe {
+	float: left;
+    display: inline-block;
+}
+
+#bookclublogo {
+	height: 80px;
+	margin: 25px 80px;
+	 -webkit-transition: height .4s, margin .4s; /* Safari */
+    transition: height .4s, margin .4s;
+}
+
+#bookclublogo.small {
+	height: 40px;
+	margin: 10px 80px;
+}
+
+ul.navlist {
+	float: right;
+	text-align: right;
+	margin: 50px 80px 50px 0;
+	 -webkit-transition: margin .4s; /* Safari */
+    transition: margin .4s;
+}
+
+ul.navlist.small {
+	margin: 20px 80px 20px 0;
+}
+
+ul.navlist li {
+	width: 160px;
+    list-style: none;
+    display: inline;
+}
+
+ul.navlist li a {
+	text-decoration: none;
+	color: #222222;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 14pt;
+	border-radius: 3px;
+	padding: 15px 15px;
+	margin-left: 10px;
+}
+
+ul.navlist.small li a {
+	border-radius: 0;
+	padding: 30px 15px;
+}
+
+ul.navlist li a:hover {
+	background-color: #33B4E9;
+	color: #ffffff;
+}
+
+.counter {
+    width: 20px;
+    height: 20px;
+    background: black;
+    color: #fff;
+    position: fixed;
+    top: 120px;
+    right: 0;
+}
+
+ #current {
+	font-weight: 500;
+}
+
+
+/*---*/
+
+/*FOOTER*/
+
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: #aaaaaa;
+=
+}
+
+#footcontent {
+	margin-right: 80px;
+}
+
+#foottext {
+	margin: 0 auto;
+}
+
+#foottext P {
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 40px;
+	font-size: 11pt;
+	padding: 20px 0 0 0;
+	float: right;
+}
+
+#footimg {
+	margin-left: 40px;
+	float: right;
+}
+
+#footimg img {
+	width: 25px;
+	padding: 0 0 0 20px;
+	margin-top: 30px;
+}
+
+/*---*/
+
+/*HOME*/
+
+#bookcovers {
+	margin-top: 140px;
+	text-align: center;	
+	width: 100%;
+	position: relative;
+}
+
+#bookcovers img {
+	width: 98%;
+}
+
+#homeintro {
+	position: absolute;
+	max-width: 1200px;
+	top: 680px;
+}
+
+/*---*/
+
+/*ABOUT US*/
+
+#library {
+	position: relative;
+	overflow: hidden;
+	margin: 120px 0;
+}
+
+#aboutus {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 400px;
+	width: 1200px;
+	padding: 80px 40px;
+	border-radius: 3px;
+	background-color: #33B4E9;
+	color: #ffffff;
+	box-shadow: 0 3px 10px #aaaaaa;
+}
+
+#aboutus .description {
+	margin-top: 60px;
+	width: 890px;
+}
+
+#aboutus img {
+	position: absolute;
+	top: -31px;
+	right: 80px;
+}
+
+/*---*/
+
+/*BROWSE BOOKS*/
+
+form {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #33B4E9;
+	color: #ffffff;
+	font-size: 16pt;
+	border-radius: 3px 3px 0px 0px;
+	height: 330px;
+}
+
+
+form p {
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: 500;
+	color: #fff;
+}
+
+input[type=search] {
+	width: 100%;
+	height: 56px;
+	padding-left: 60px;
+	background-color: #ffffff;
+    background-image: url('images/search.png');
+    background-position: 15px 10px; 
+    background-repeat: no-repeat;
+	font-size: 16pt;
+	font-family: 'Montserrat', sans-serif;
+	border: solid 3px #33B4E9;
+	color: #cccccc;
+}
+
+
+input[type=search]:focus {
+	outline: none;
+	border: solid 3px #aaaaaa;
+}
+
+input[type=submit] {
+	border: none;
+	height: 50px;
+	width: 150px;
+	padding: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14pt;
+	background-color: #ffffff;
+	color: #222222;
+	border-radius: 3px;
+	font-weight: 500;
+	position: relative;
+    top: -75;
+	float: right;
+}
+
+input[type=submit]:active {	
+	background-color: #4153a0;
+	color: #ffffff;
+}
+
+#browsetable {
+	background-color: #4153a0;
+	color: #ffffff;
+	border-radius: 0px 0px 3px 3px;
+}
+
+#col1 {
+	width: 60%;
+}
+
+#col2 {
+	width: 20%;
+}
+
+#col3 {
+	width: 20%;
+}
+
+#reservebook {
+	text-decoration: none;
+	text-align: center;
+	padding: 5px;
+	vertical-align: middle;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14pt;
+	background-color: #ffffff;
+	color: #222222;
+	border-radius: 3px;
+	display: block;
+	width: 90px;
+    height: 30px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+	float: right;
+	font-weight: 300;
+}
+
+/*---*/
+
+/*MY BOOKS*/
+
+#mybookstable {
+	margin: 0;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+
+#returnbook {
+	width: 90px;
+    height: 30px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+	float: right;
+	font-weight: 300;
+}
+
+/*---*/
+
+/*GALLERY*/
+
+#userimg {
+	max-height: 300px;
+}
+	
