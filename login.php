@@ -29,7 +29,7 @@
 		  if($count == 1) {
 			 $_SESSION['login_user'] = $username;
 	
-			 header("location: fileUpload.php");
+			 header("location: backend/add.php");
 		  }else {
 			 $error = 'Your username or password is invalid!';
 		  }
