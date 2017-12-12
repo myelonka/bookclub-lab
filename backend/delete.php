@@ -16,6 +16,7 @@
 			include('session.php');
 			ini_set('session.cookie_httponly', true);
 		
+		
 			$query = " SELECT bookId, title, author FROM books ";
 		
 			$display = $db->prepare($query);
@@ -26,8 +27,8 @@
 		
 				if (isset($_GET['submit'])) {
 
-					 $bookid = trim($_GET['bookid']);  
-					 $bookid = addslashes($bookid);
+					 $bookId = trim($_GET['bookId']);  
+					 $bookId = addslashes($bookId);
 
 					 @ $db = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
 
@@ -39,7 +40,7 @@
 
 
 				  $stmt = $db->prepare("DELETE FROM books WHERE bookId = ?");
-				  $stmt->bind_param('i', $bookid);
+				  $stmt->bind_param('i', $bookId);
 				  $response = $stmt->execute();
 				  printf("<br>Book deleted!");
 				  printf("<br><a href=delete.php>Return</a><br><a href=../browse.php>Go to Browse</a>");
@@ -64,8 +65,7 @@
 					echo '<option value="bookid">'.$title.' (by '.$author.')</option>';
 					};
 			echo '</select>';
-					 $bookid = trim($_GET['bookid']);
-					 echo '<input type="hidden" name="bookid" value=' . $bookid . '>';
+					 echo '<input type="hidden" name="bookid" value=' . $bookId . '>';
 					 ?>
 					 <input type="submit" name="submit" value="Delete">
 				</form>

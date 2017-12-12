@@ -25,6 +25,12 @@
 			 $newedition = trim($_POST['newedition']);
 			 $newyearpubl = trim($_POST['newyearpubl']);
 			 $newpublisher = trim($_POST['newpublisher']);
+			 $newbooktitle = htmlentities($newbooktitle);
+			 $newbookauthor = htmlentities($newbookauthor);
+			 $newpagesno = htmlentities($newpagesno);
+			 $newedition = htmlentities($newedition);
+			 $newyearpubl = htmlentities($newyearpubl);
+			 $newpublisher = htmlentities($newpublisher);
 			
 
 			 if (!$newbooktitle || !$newbookauthor) {
