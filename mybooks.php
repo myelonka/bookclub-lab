@@ -107,7 +107,7 @@
 
 
 				echo '<table>';
-				echo '<tr><b><td>ISBN</td><b> <td>Title</td> <td>Author</td> <td>Reserved?</td> </b> <td>Return</td> </b></tr>';
+				echo '<tr><b><td>ID</td><b> <td>Title</td> <td>Author</td> <td>Reserved?</td> </b> <td>Return</td> </b></tr>';
 				while ($stmt->fetch()) {
 					if($onLoan==1)
 						$onLoan="Yes";

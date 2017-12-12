@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2017 at 07:09 PM
+-- Generation Time: Dec 12, 2017 at 08:04 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -53,6 +53,33 @@ INSERT INTO `authors` (`authorId`, `fName`, `lName`, `birthYear`, `ssn`, `moreIn
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `book2author`
+--
+
+CREATE TABLE `book2author` (
+  `bookId` int(11) NOT NULL,
+  `authorId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `book2author`
+--
+
+INSERT INTO `book2author` (`bookId`, `authorId`) VALUES
+(1, 1),
+(2, 1),
+(3, 5),
+(4, 7),
+(5, 2),
+(6, 2),
+(7, 4),
+(8, 4),
+(9, 3),
+(10, 6);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `books`
 --
 
@@ -72,16 +99,16 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`bookId`, `title`, `author`, `pagesNo`, `edition`, `yearPubl`, `publisher`, `onLoan`) VALUES
-('0430553966', 'Ugly Man', 'Dennis Cooper', 272, NULL, 2009, 'Harper Perennial', 0),
-('0747583092', 'The Utopia of Rules', 'David Graeber', 272, 'Reprint', 2016, 'Melville House', 0),
-('1051253785', 'The Man from Beijing', 'Henning Mankell', 464, NULL, 2008, 'Vintage Crime/Black Lizard', 1),
-('2076141471', 'Smothered in Hugs', 'Dennis Cooper', 400, NULL, 2010, 'Harper Perennial', 0),
-('5676896203', 'The Fifth Woman', 'Henning Mankell', 437, 'Wallander Series', 1996, 'Vintage Crime/Black Lizard', 1),
-('7588047572', 'Security', 'Stephen Amidon', 288, NULL, 2008, 'Penguin Publishing', 0),
-('9186904040', 'The Girl Who Played with Fire', 'Stieg Larsson', 689, NULL, 2006, 'Vintage Crime/Black Lizard', 0),
-('9771923860', 'The Girl with the Dragon Tattoo', 'Stieg Larsson', 672, NULL, 2005, 'Vintage Crime/Black Lizard', 0),
-('9786009494', 'The Girl Who Takes an Eye for an Eye', 'David Lagercrantz', 347, NULL, 2017, 'Vintage Crime/Black Lizard', 0),
-('9823309477', 'Annihilation', 'Jeff VanderMeer', 208, NULL, 2014, 'Penguin Publishing', 0);
+('1', 'The Girl Who Played with Fire', 'Stieg Larsson', 689, NULL, 2006, 'Vintage Crime/Black Lizard', 1),
+('10', 'The Utopia of Rules', 'David Graeber', 272, 'Reprint', 2016, 'Melville House', 0),
+('2', 'The Girl with the Dragon Tattoo', 'Stieg Larsson', 672, NULL, 2005, 'Vintage Crime/Black Lizard', 0),
+('3', 'Security', 'Stephen Amidon', 288, NULL, 2008, 'Penguin Publishing', 0),
+('4', 'Annihilation', 'Jeff VanderMeer', 208, NULL, 2014, 'Penguin Publishing', 0),
+('5', 'The Man from Beijing', 'Henning Mankell', 464, NULL, 2008, 'Vintage Crime/Black Lizard', 1),
+('6', 'The Fifth Woman', 'Henning Mankell', 437, 'Wallander Series', 1996, 'Vintage Crime/Black Lizard', 1),
+('7', 'Ugly Man', 'Dennis Cooper', 272, NULL, 2009, 'Harper Perennial', 0),
+('8', 'Smothered in Hugs', 'Dennis Cooper', 400, NULL, 2010, 'Harper Perennial', 0),
+('9', 'The Girl Who Takes an Eye for an Eye', 'David Lagercrantz', 347, NULL, 2017, 'Vintage Crime/Black Lizard', 0);
 
 -- --------------------------------------------------------
 
@@ -111,8 +138,7 @@ INSERT INTO `user` (`id`, `username`, `userpass`) VALUES
 -- Indexes for table `authors`
 --
 ALTER TABLE `authors`
-  ADD PRIMARY KEY (`authorId`),
-  ADD UNIQUE KEY `authorId` (`authorId`);
+  ADD PRIMARY KEY (`authorId`);
 
 --
 -- Indexes for table `books`
